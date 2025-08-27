@@ -22,5 +22,10 @@ SELECT nmCliente, nrCPF FROM CLIENTE
 WHERE nmCliente LIKE 'A%'
 
 /* Exercícios 5*/
-SELECT * FROM TIPO_TRANSACAO, TRANSACAO
-ORDER BY 2,6,7 DESC
+SELECT nmTipoTransacao FROM TIPO_TRANSACAO
+WHERE nmTipoTransacao LIKE 'Depósito%'
+	OR nmTipoTransacao LIKE 'Saque' 
+	OR nmTipoTransacao LIKE 'PIX'
+
+SELECT dtMovimentacao, vlTransacao FROM TRANSACAO
+Where dtMovimentacao like ''
